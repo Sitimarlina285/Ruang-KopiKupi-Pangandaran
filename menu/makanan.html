@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruang KopiKupi - Pangandaran</title>
+    <link rel="icon" href="../img/logo.webp" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="blur-background"></div>
+    
+   <header class="header">
+        <div class="header-content">
+            <h1><a href="../index.html">Ruang KopiKupi - Pangandaran</a></h1>
+            <div class="dropdown-container">
+                <button class="dropdown-btn" id="dropdownBtn">
+                    <span>Pilih Kategori</span>
+                    <span class="dropdown-icon">▼</span>
+                </button>
+                <div class="dropdown-menu" id="dropdownMenu">
+                    <div class="dropdown-item" data-url="makanan.html">
+                        <span class="dropdown-item-icon">🍽️</span>
+                        <div class="dropdown-item-text">
+                            <span class="dropdown-item-title">Makanan</span>
+                            <span class="dropdown-item-desc">Hidangan utama & appetizer</span>
+                        </div>
+                    </div>
+                    <div class="dropdown-item" data-url="minuman.html">
+                        <span class="dropdown-item-icon">☕</span>
+                        <div class="dropdown-item-text">
+                            <span class="dropdown-item-title">Minuman</span>
+                            <span class="dropdown-item-desc">Kopi, teh & minuman segar</span>
+                        </div>
+                    </div>
+                    <div class="dropdown-item" data-url="snack.html">
+                        <span class="dropdown-item-icon">🍪</span>
+                        <div class="dropdown-item-text">
+                            <span class="dropdown-item-title">Snack</span>
+                            <span class="dropdown-item-desc">Cemilan & makanan ringan</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+ <div class="content">
+        <div class="page-title">
+            <h2>Makanan Menu</h2>
+        </div>
+        
+        <div class="menu-container">
+            <div class="product-card">
+                <img src="../img/nasgor.jpg" width="200" height="200" alt="Nasi Goreng Spesial">
+                <button class="product-button" 
+                        data-img="../img/nasgor.jpg"
+                        data-title="Nasi Goreng Spesial"
+                        data-desc="Nasi goreng spesial dengan campuran <em>udang segar</em>, <em>cumi</em>, dan <em>kerang</em>, dibumbui rempah pilihan untuk cita rasa laut yang kaya dan lezat.">
+                    Nasi Goreng Spesial
+                </button>
+            </div>
+
+            <!-- Mie -->
+            <div class="product-card">
+                <img src="../img/mie.jpg" width="200" height="200" alt="Mie">
+                <button class="product-button" 
+                        data-img="../img/mie.jpg""
+                        data-title="Mie"
+                        data-desc="Mie goreng lezat dengan bumbu khas, dilengkapi dengan topping sayur dan protein pilihan. Cocok disantap kapan saja.">
+                    Mie
+                </button>
+            </div>
+
+            <!-- Kwetiau Goreng -->
+            <div class="product-card">
+                <img src="../img/kwetiau.jpeg" width="200" height="200" alt="Kwetiau Goreng">
+                <button class="product-button" 
+                        data-img="../img/kwetiau.jpeg"
+                        data-title="Kwetiau Goreng"
+                        data-desc="Kwetiau lebar yang digoreng dengan bumbu spesial, berpadu dengan daging, sayuran, dan aroma khas oriental.">
+                    Kwetiau Goreng
+                </button>
+            </div>
+
+            <!-- Nasi Ayam Teriyaki -->
+            <div class="product-card">
+                <img src="../img/teriyaki.jpg" width="200" height="200" alt="Nasi Ayam Teriyaki">
+                <button class="product-button" 
+                        data-img="../img/teriyaki.jpg"
+                        data-title="Nasi Ayam Teriyaki"
+                        data-desc="Ayam panggang dengan saus teriyaki manis gurih, disajikan dengan nasi hangat dan sayuran segar. Menu khas Jepang favorit semua kalangan.">
+                    Nasi Ayam Teriyaki
+                </button>
+            </div>
+
+            <!-- Nasi Ayam Geprek -->
+            <div class="product-card">
+                <img src="../img/Ayam_geprek.png" width="200" height="200" alt="Nasi Ayam Geprek">
+                <button class="product-button" 
+                        data-img="../img/Ayam_geprek.png"
+                        data-title="Nasi Ayam Geprek"
+                        data-desc="Ayam goreng tepung yang digeprek dengan sambal pedas menggoda, disajikan bersama nasi putih hangat. Pedasnya nampol!">
+                    Nasi Ayam Geprek
+                </button>
+            </div>
+
+            <!-- Katsudon -->
+            <div class="product-card">
+                <img src="../img/katsudon.jpg" width="200" height="200" alt="Katsudon">
+                <button class="product-button" 
+                        data-img="../img/katsudon.jpg"
+                        data-title="Katsudon"
+                        data-desc="Hidangan nasi Jepang dengan topping ayam katsu goreng tepung yang lembut, disiram saus gurih manis dan telur. Favorit klasik nan mengenyangkan.">
+                    Katsudon
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Popup -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close-button" id="close-popup">&times;</span>
+            <img id="popup-img" src="" alt="Popup Image">
+            <h3 id="popup-title"></h3>
+            <p id="popup-desc"></p>
+        </div>
+    </div>
+
+    
+<script src="script.js" defer></script>
+</body>
+
+</html>

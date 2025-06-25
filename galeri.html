@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Galeri - Ruang KopiKupi</title>
+  <link rel="stylesheet" href="style.css"> <!-- jika kamu punya file css terpisah -->
+<style>
+ 
+  .slider-container {
+    position: relative;
+    width: 50%;
+    max-width: 900px;
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  .gallery-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+  }
+
+  .slide {
+    min-width: 100%;
+    position: relative;
+  }
+
+  .slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 16px;
+    cursor: pointer;
+  }
+
+  .gallery-navigation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    pointer-events: none;
+  }
+
+  .nav-button {
+    pointer-events: all;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  .dot-container {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background: #aaa;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .dot.active {
+    background: #c77f3e;
+  }
+
+  #imageModal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+
+  #modalImage {
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+    margin: 5% auto;
+    border-radius: 12px;
+  }
+</style>
+
+</head>
+<body class="galeri-body">
+ <div class="container">
+        <a href="index.html" class="back-button">← Kembali ke beranda</a>
+
+      <div class="slider-container">
+        <div class="gallery-slider" id="sliderTrack">
+          <div class="slide active">
+            <video controls width="640" height="480" autoplay muted loop playsinline>
+              <source src="img/vid1.mp4" type="video/mp4">
+              Browser kamu tidak mendukung tag video.
+            </video>
+          </div>
+          <div class="slide">
+            <video controls width="640" height="480" autoplay muted loop playsinline>
+              <source src="img/vid2.mp4" type="video/mp4">
+              Browser kamu tidak mendukung tag video.
+            </video>
+          </div>
+          <div class="slide">
+            <img src="img/cafe3.webp" onclick="openModal(this.src)" alt="Galeri 2">
+          </div>
+          <div class="slide">
+            <img src="img/cafe4.jpg" onclick="openModal(this.src)" alt="Galeri 3">
+          </div>
+        </div>
+    </div>
+
+
+    <div class="gallery-navigation">
+      <button class="nav-button" onclick="prevSlide()">‹</button>
+      <button class="nav-button" onclick="nextSlide()">›</button>
+    </div>
+  </div>
+
+  <div class="dot-container">
+  <span class="dot active" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+</div>
+
+
+  <!-- Modal untuk gambar besar -->
+  <div id="imageModal" onclick="closeModal()">
+    <img id="modalImage" src="" alt="Gambar besar">
+  </div>
+</div>
+  <script src="script.js"></script>
+  
+</body>
+</html>
