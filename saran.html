@@ -1,33 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Saran - Ruang KopiKupi Pangandaran</title>
-    <link rel="icon" href="img/logo.webp" type="image/svg+xml">
-    <link rel="stylesheet" href="style.css">
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saran - Ruang KopiKupi Pangandaran</title>
+<link rel="icon" href="img/logo.webp" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+<style>
+body {
+       display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('img/bg.jpeg') center/cover fixed;
+    color: #333;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.form-container {
+    background: rgba(255,255,255,0.95);
+    padding: 30px;
+    padding-right: 70px;
+    border-radius: 15px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    position: relative;
+    z-index: 1;
+}
+h1 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #333;
+}
+label {
+    display: block;
+    text-align: left;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #333;
+}
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+button {
+    background: #c77f3e;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s;
+}
+button:hover {
+    background: #a85d23;
+}
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: #c77f3e;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: white;
+    transition: background 0.3s;
+    z-index: 2;
+}
+.back-button:hover {
+    background: #a85d23;
+
+}
+</style>
 </head>
 <body>
-     <div class="container">
-        <a href="index.html" class="back-button">← Kembali ke beranda</a>
-        
-        <div class="header">
-            <h1>Berikan Saran </h1>
-        </div>
- <center>
-  <form id="saranForm">
-    <label for="pesan">Nama :</label><br>
-    <input type="text" id="nama" name="nama" required></input>
-
-    <label for="pesan">Saran:</label><br>
-    <textarea id="pesan" name="pesan" required></textarea><br><br>
-
-    <button type="submit">Kirim</button>
-  </form>
-</center>
-<script src="script.js" defer></script>
-
- 
+  <a href="index.html" class="back-button">← Kembali ke beranda</a>
+  <div class="form-container">
+    <h1>Berikan Saran</h1>
+    <form id="saranForm">
+      <label for="nama">Nama :</label>
+      <input type="text" id="nama" name="nama" required>
+      <label for="pesan">Saran:</label>
+      <textarea id="pesan" name="pesan" required></textarea>
+      <button type="submit">Kirim</button>
+    </form>
+  </div>
+  <script src="script.js" defer></script>
 </body>
 </html>
