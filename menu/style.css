@@ -409,3 +409,12 @@
                 font-size: 36px;
             }
         }
+
+        #popup-video {
+    display: none;
+    width: 300px;
+    max-width: 90%;
+    height: 300px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
